@@ -36,7 +36,7 @@
 
 	function Player () {
 		this.img = new Image();
-		this.img.src = '/assets/player.png';
+		this.img.src = './assets/player.png';
 		this.width = 34;
 		this.height = 24;
 		this.x = (canvas.width / 2) - (this.width / 2);
@@ -238,12 +238,12 @@
 		canvas = document.querySelector('#canvas');
 		context = canvas.getContext('2d');
 
-		sky = new Background('/assets/sky.png', 500, 109, 1);
-		land = new Background('/assets/land.png', 500, 112, 0.6);
-		pipeUp.src = '/assets/pipe-up.png';
-		pipeDown.src = '/assets/pipe-down.png';
-		startImage.src = '/assets/start.png';
-		gameOverImage.src = '/assets/game-over.png';
+		sky = new Background('./assets/sky.png', 500, 109, 1);
+		land = new Background('./assets/land.png', 500, 112, 0.6);
+		pipeUp.src = './assets/pipe-up.png';
+		pipeDown.src = './assets/pipe-down.png';
+		startImage.src = './assets/start.png';
+		gameOverImage.src = './assets/game-over.png';
 		player = new Player();
 
 		land.y = canvas.height - land.h;
@@ -251,7 +251,7 @@
 
 		[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(function (n) {
 			var img = new Image();
-			img.src = '/assets/score' + n + '.png';
+			img.src = './assets/score' + n + '.png';
 			scoreImages.push(img);
 		});
     web3.eth.getAccounts(function(error, accounts) {
